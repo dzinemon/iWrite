@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500" rel="stylesheet">
+	<title>Order · Flexbox & Presprocessor</title>
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<a href="#" class="logo">
+				
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 361.5 361.5" class="logo-icon">
+						<path d="M361.5 31.068c0-7.063-2.75-13.702-7.742-18.694l-4.637-4.64c-10.306-10.303-27.072-10.303-37.38-.007l-.01.01-22.36 22.356-3.71-3.71c-1.406-1.406-3.313-2.196-5.303-2.196-1.988 0-3.896.79-5.303 2.197L21.76 279.68c-.01.01-.015.02-.022.027-.867.87-1.53 1.966-1.89 3.232L.283 351.95c-.742 2.614-.01 5.426 1.912 7.35 1.426 1.425 3.342 2.195 5.305 2.195.683 0 1.37-.093 2.046-.284l69.01-19.562c.022-.007 1.84-.458 3.258-1.912L314.67 106.88l.647.646c7.166 7.165 7.166 18.824 0 25.99L222.97 225.86c-2.93 2.93-2.93 7.678 0 10.607 1.465 1.464 3.385 2.196 5.304 2.196 1.92 0 3.84-.732 5.304-2.196l92.346-92.345c13.014-13.015 13.014-34.19 0-47.204l-.646-.646 9.833-9.834c1.408-1.407 2.197-3.314 2.197-5.304 0-1.99-.79-3.896-2.196-5.304l-3.71-3.71 22.356-22.357c4.994-4.993 7.744-11.632 7.744-18.695zm-81.142 11.226l38.842 38.84-4.53 4.53-38.842-38.84 4.53-4.53zM18.38 343.114l12.415-43.792L62.173 330.7 18.38 343.114zm58.13-19.29l-38.84-38.84 9.83-9.83 38.842 38.84-9.83 9.83zm20.44-20.435l-38.845-38.84L265.222 57.43l38.84 38.842L96.95 303.39zm246.2-264.233l-22.357 22.357L299.978 40.7l22.357-22.356.002-.003c4.46-4.457 11.717-4.457 16.176 0l4.636 4.64c2.16 2.16 3.35 5.032 3.35 8.088 0 3.056-1.19 5.93-3.35 8.09z" />
+					</svg>
+		
+				<h1>iWrite</h1>
+			</a>
+			<div class="menu">
+				<ul>
+					<li>
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+										<path d="M13 1H3l-3 9v5h16v-5l-3-9zm-2 9v2H5v-2H1L4 2h8.6l2.7 8h-4z" />
+							</svg>
+							<span>Orders</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 330" class="menu-icon">
+										<path d="M282.8 280.4C312 250.7 330 210 330 165s-18-85.7-47.2-115.4l-1-1.3-1.4-1C250.7 18 210 0 165 0S79.3 18 49.6 47.2l-1.3 1-1 1.4C18 79.3 0 120 0 165s18 85.7 47.2 115.4l1 1.3 1.4 1C79.3 312 120 330 165 330s85.7-18 115.4-47.2l1.3-1 1-1.4zm-12.4-31.2l-32-32C249.2 202 255 184 255 165s-5.8-37-16.6-52l32-32.2c18.5 23 29.6 52.4 29.6 84.2 0 31.8-11 61-29.6 84.2zM165 225c-16 0-31-6.2-42.4-17.6C111.2 196 105 181 105 165s6.2-31 17.6-42.4c5.2-5.3 11.3-9.5 18-12.5 7.7-3 16-5 24.4-5 16 0 31 6.6 42.4 18 11.4 11 17.6 26 17.6 42s-6.2 31-17.6 42.5C196 218.8 181 225 165 225zm84.2-165.4l-32 32C202 80.8 184 75 165 75c-12.7 0-25 2.6-36.5 7.7-5.5 2.5-10.7 5.5-15.6 9l-32.6-32C103.4 41 133.2 30 165 30c31.8 0 61 11 84.2 29.6zM59.6 80.8l32 32C80.8 128 75 146 75 165s5.8 37 16.6 52l-32 32.2C41 226.2 30 196.8 30 165c0-31.8 11-61 29.6-84.2zm21.2 189.6l32-32C128 249.2 146 255 165 255s37-5.8 52-16.6l32.2 32C226.2 289 196.8 300 165 300c-31.8 0-61-11-84.2-29.6z" />
+							</svg>
+							<span>Support</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.06 31.06" class="menu-icon">
+										<path d="M18.8 31.06h-6.54c-.5 0-.9-.4-.9-.9V27.6c-.48-.17-.96-.37-1.42-.6l-1.82 1.82c-.17.17-.4.26-.63.26-.3 0-.5-.1-.7-.26L2.2 24.2c-.35-.35-.35-.9 0-1.26L4 21.12l-.6-1.43H.9c-.25 0-.47-.1-.64-.3C.1 19.2 0 19 0 18.8v-6.55c0-.5.4-.9.9-.9h2.56c.17-.48.37-.96.6-1.42L2.24 8.1c-.17-.17-.26-.4-.26-.63 0-.26.1-.48.26-.65L6.86 2.2c.17-.17.4-.26.63-.26.2 0 .4.1.6.26l1.8 1.82c.4-.23.9-.43 1.4-.6V.9c0-.5.4-.9.9-.9h6.5c.5 0 .9.4.9.9v2.56c.4.17.9.37 1.4.6l1.8-1.82c.3-.35.9-.35 1.2 0l4.6 4.62c.2.17.2.4.2.63 0 .2-.1.4-.26.6L27 9.9c.23.46.43.94.6 1.43h2.57c.5 0 .9.4.9.9v6.53c0 .24-.1.46-.27.63-.17.1-.4.2-.63.2H27.6c-.17.4-.37.9-.6 1.4l1.82 1.8c.35.3.35.9 0 1.2l-4.62 4.6c-.17.1-.4.2-.63.2-.23 0-.46-.1-.63-.26L21.12 27c-.46.23-.94.43-1.43.6v2.57c0 .24-.1.46-.3.63-.2.17-.4.26-.7.26zm-5.65-1.78h4.76v-2.34c0-.4.3-.74.7-.85.8-.3 1.6-.6 2.3-1 .4-.2.8-.2 1.1.1l1.7 1.6 3.3-3.3-1.6-1.7c-.3-.3-.3-.7-.1-1.1.4-.7.77-1.5 1-2.3.1-.4.45-.6.84-.6h2.3V13H27c-.4 0-.76-.23-.87-.6-.23-.8-.55-1.6-.95-2.3-.2-.36-.1-.8.2-1.07l1.6-1.6-3.36-3.4-1.65 1.64c-.3.3-.7.34-1.06.15-.7-.4-1.5-.74-2.3-.97-.4-.1-.6-.47-.6-.87V1.8h-4.8v2.3c0 .4-.25.76-.63.86-.8.23-1.6.56-2.3.96-.37.2-.8.13-1.1-.15L7.5 4.12 4.1 7.5l1.65 1.64c.28.28.34.72.15 1.06-.4.73-.72 1.5-.95 2.3-.1.38-.46.65-.86.65H1.7v4.76h2.4c.4 0 .76.3.87.7.23.8.55 1.6.95 2.3.2.4.13.8-.15 1.1l-1.65 1.6L7.5 27l1.6-1.66c.22-.3.7-.33 1-.14.72.4 1.5.72 2.3.95.37.1.64.45.64.84v2.3z" />
+										<path d="M15.53 22.27c-3.72 0-6.74-3.02-6.74-6.74s3-6.74 6.7-6.74c3.7-.1 6.7 3 6.7 6.7s-3 6.7-6.8 6.7zm0-11.7c-2.74 0-4.97 2.22-4.97 4.96 0 2.74 2.23 4.97 4.97 4.97 2.74 0 4.97-2.23 4.97-4.97 0-2.74-2.23-4.97-4.97-4.97z" />
+							</svg>
+							<span>Profile</span>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 487.6 487.6" class="menu-icon">
+										<path d="M460.3 216.6h-11.6V147c0-28.6-23.2-51.7-51.6-51.7h-10.4v-26c0-19-15.5-34.7-34.7-34.7H42.2c-23 0-42 18.6-42.3 41.7v342c0 19 15.6 34.6 34.8 34.6h362.4c28.5 0 51.6-23 51.6-51.7v-70h11.6c15 0 27.2-12 27.2-27v-60.8c0-15-12.3-27-27.3-27zm-418-158h309.4c6 0 10.8 4.8 10.8 10.7v26H42.2C32.2 95.3 24 87 24 77s8.2-18.5 18.3-18.5zm382.4 342.8c0 15.2-12.4 27.6-27.6 27.6H35c-6 0-10.8-4.8-10.8-10.8v-303c5.5 2.6 11.7 4 18.3 4H397c15.3 0 27.7 12.5 27.7 27.7v69.4h-82c-15 0-27 12.2-27 27.2v60.6c0 15 12 27.3 27 27.3h82v69.7zm38.8-97c0 2-1.4 3.3-3.2 3.3H343c-2 0-3.3-1.5-3.3-3.3v-60.6c0-1.8 1.4-3.3 3.2-3.3h117c1.7 0 3.2 1.5 3.2 3.3v60.6z" />
+							</svg>
+							<span class="balance">Balance</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="account">
+				<a href="#" class="new-order">
+					
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357" class="account-icon">
+						<path d="M357 204H204v153h-51V204H0v-51h153V0h51v153h153v51z" />
+					</svg>
+		
+					<span>New&nbsp;order</span>
+				</a>
+				<a href="#">
+					
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 378.94 378.94" class="account-icon">
+						<path d="M348.2 54.5c-20-20-46.4-30.8-74.5-30.8-28 0-54.5 11-74.4 30.8l-9.8 9.8-9.8-9.8c-20-20-46.4-30.8-74.5-30.8-28 0-54.5 11-74.4 30.8-41 41-41 108 0 149l147 147c2.5 2.4 5.5 4 8.6 4.5 1 .2 2 .3 3.2.3 4 0 8.3-1.6 11.5-4.8l147.2-147c41-41 41-108 0-149zm-23 126L189.5 316 53.8 180.5c-28.4-28.4-28.4-74.5 0-103 13.7-13.6 32-21.2 51.4-21.2 19.5 0 37.7 7.6 51.5 21.3L178 98.8c6 6 17 6 23 0l21.3-21.3c13.7-13.7 32-21.3 51.4-21.3s37.7 7.6 51.5 21.3c28.3 28.4 28.3 74.5 0 103z" />
+					</svg>
+		
+				</a>
+				<a href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.239 174.239" class="account-icon">
+						<path d="M164 138c-25.4-15.8-24-66.7-24-67.5 0-23.8-15.8-44-37.5-50.5v-4.6C102.5 7 95.5 0 87 0S71.8 7 71.8 15.4V20C50 26.6 34.3 46.8 34.3 70.8c.5 14.2-3 54-24 67-3 2-4.2 5.3-3.3 8.5 1 3.2 3.8 5.4 7.2 5.4H59c2.8 13 14.4 22.5 28 22.5s25.4-9.6 28.4-22.5H160c3.4 0 6.3-2.2 7.2-5.4 1-3.2-.4-6.6-3.2-8.4zm-83.6-1.2h-48c18-25.2 17-64.5 16.8-66.3 0-21 17-38 38-38 20.8 0 37.8 17 37.8 37.7 0 2-1 41.4 16.7 66.6H80.4z" />
+					</svg>
+				</a>
+				<a href="" class="account-profile">
+					<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" class="account-icon-user">
+						<circle cx="25" cy="25" fill="none" r="24" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+						<path fill="#f9f9f9" d="M0 0h50v50H0z" />
+						<path d="M30 35.5c-.2-1.6-.2-2.7-.2-4.2.8-.4 2-2.8 2.3-5 .7 0 1.6-.5 1.8-2.7.2-1.2-.4-1.8-.7-2 1-3 3-11.6-3.5-12.5-.7-1-2.4-1.6-4.6-1.6-9 .2-10 6.7-8 14-.4.4-1 1-.8 2.2.2 2.2 1 2.8 1.7 2.8 0 2 1.5 4.5 2.2 5v4c-1.3 3.5-7.8 3.8-11.6 7 4 4 10.3 6.8 17 6.8S40 44 41.4 42.5c-3.7-3.3-10.2-3.6-11.5-7z" />
+					</svg>
+					<!--							ARROW-->
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 306" class="account-icon">
+						<path d="M270.3 58.6L153 176 35.7 58.6 0 94.3l153 153 153-153" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="clearfix">
+		<div class="tab-container">
+			<nav class="tabs">
+				<ul class="tab-menu">
+					<li class="tab-item"><a href="#" class="tab-link">RECENT</a></li>
+					<li class="tab-item"><a href="#" class="tab-link">FINISHED</a></li>
+					<li class="tab-item"><a href="#" class="tab-link">CANCELED</a></li>
+				</ul>
+			</nav>
+			<a href="#" class="sort-link">
+				<span>SORTED BY ID</span>
+				<!--							ARROW-->
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 306 306" class="sort-icon">
+					<path d="M270.3 58.6L153 176 35.7 58.6 0 94.3l153 153 153-153" />
+				</svg>
+			</a>
+		</div>
+		
+		<div class="title-table">
+				<div class="title"><p>Title</p></div>
+				<div class="deadline"><p>Deadline</p></div>
+				<div class="status"><p>Status</p></div>
+				<div class="assign"><p>Assigned to</p></div>
+				<div class="value"><p>Price / Paid</p></div>
+				<div class="id"><p>ID</p></div>
+			</div>
+
+			<div class="progress">
+				<div class="ticket green-ticket"></div>
+				<div class="title">
+					<p>What is State Regulations? Why is it impo...rtant? Provide concrete examples. </p>
+					<p>Psychology and Education, Argumentative essay </p>
+				</div>
+				<div class="deadline">
+					<p>May 28, 11:59 AM</p>
+					<p>4 days left</p>
+				</div>
+				<div class="status">
+					<p>Progress (pages 1 of 5)</p>
+					<p>
+						<progress max="100" value="24"></progress>
+					</p>
+				</div>
+				<div class="assign">
+					<div class="user-avatar user-active">
+						<a href="#" class="assigned-user"></a>
+					</div>
+					<div class="rating">
+						<p>KinGchelo</p>
+<!--						<img src="img/svg/star.svg" alt="">-->
+						<p>9.8</p>
+					</div>
+				</div>
+				<div class="value">
+					<p>$1250</p>
+					<p>$100</p>
+				</div>
+				<div class="number">
+					<p></p>
+					<p class="details">#34453456</p>
+				</div>
+			</div>
+
+			<div class="progress">
+				<div class="ticket aqua-ticket">
+				</div>
+				<a href="#" class="envelope aqua-ticket"></a>
+				<div class="title">
+					<p>Microeconomic</p>
+					<p>Coursework, Health Care and Life Sciences</p>
+				</div>
+				<div class="deadline">
+					<p>May 25, 11:59 AM</p>
+					<p>22 hours left</p>
+				</div>
+				<div class="status">
+					<p>Bidding</p>
+					<p>
+						<progress max="100" value="100" class="bidding"></progress>
+					</p>
+				</div>
+				<div class="assign">
+					<div class="user-avatar">
+					</div>
+					<div class="rating">
+						<p class="middle">35 bids</p>
+					</div>
+				</div>
+				<div class="value">
+					<p>$230</p>
+					<p>$0</p>
+				</div>
+				<div class="number">
+					<p></p>
+					<p>#34453422</p>
+				</div>
+			</div>
+
+			<div class="progress canceled">
+				<div class="ticket biege-ticket"></div>
+				<div class="title">
+					<p>why lying and stealing is wrong </p>
+					<p>Essay (any type), English and Literature</p>
+				</div>
+				<div class="deadline">
+					<p>Jul 02 at 14:29 PM</p>
+					<p>2 hours left</p>
+				</div>
+				<div class="status">
+					<p>Canceled automatically</p>
+					<p>
+						<progress max="100" value="100" class="bid-canceled"></progress>
+					</p>
+				</div>
+				<div class="assign">
+					<div class="user-avatar">
+						<a href="#" class=""></a>
+					</div>
+					<div class="rating">
+						<p>Schofield</p>
+<!--						<img src="img/svg/star.svg" alt="">-->
+						<p>8.9</p>
+					</div>
+				</div>
+				<div class="value">
+					<p>$30</p>
+					<p>$0</p>
+				</div>
+				<div class="number">
+					<p></p>
+					<p>#34453422</p>
+				</div>
+			</div>
+			<footer>
+				<p>Just place an order, choose the most suitable writer, and watch him work. Pay only after you approve received paper part.</p>
+			</footer>
+	</main>
+
+	
+<!--	Livereload script-->
+<!--
+	<script>document.write('<script src="http://'
++ (location.host || 'localhost').split(':')[0]
++ ':35729/livereload.js?snipver=1"></'
++ 'script>')</script>
+-->
+</body>
+
+</html>
